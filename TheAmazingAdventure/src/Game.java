@@ -17,26 +17,26 @@ public class Game extends StateBasedGame {
 
 	public Game() 
 	{
-		super("game");
+		super("constructor for game");
 		
 	}
 	
-	//Initalize game states 
+	//Initialize game states 
 	public void initStatesList(GameContainer gameContainer) 
 	{
-		this.addState(new MainMenu(mainMenu));
-		this.addState(new GameScreen(gameScreen));
-		this.addState(new GameOver(gameOver));
+	    addState(new MainMenu());
+		addState(new GameScreen());
+		addState(new GameOver());
 	}
 		
 	public static void main(String[] args) 
 	{
 		try
 		{
-			AppGameContainer game = new AppGameContainer(new Game());
-			game.setDisplayMode(height, width, false);
-			game.setTargetFrameRate(frameRate);
-			game.start();
+			AppGameContainer gameContainer = new AppGameContainer(new Game());
+			gameContainer.setDisplayMode(height, width, false);
+			gameContainer.setTargetFrameRate(frameRate);
+			gameContainer.start();
 		}
 		catch(SlickException e)
 		{

@@ -1,14 +1,21 @@
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.GameState;
 import org.newdawn.slick.state.StateBasedGame;
+import java.awt.font.*;
 
 public class MainMenu implements GameState {
 	
 	public final int stateID = 0;
 	private StateBasedGame game;
+	
+	public int getID()
+	{
+		return stateID;
+	}
 
 	@Override
 	public void mouseClicked(int arg0, int arg1, int arg2, int arg3) {
@@ -41,12 +48,6 @@ public class MainMenu implements GameState {
 	}
 
 	@Override
-	public void mouseWheelMoved(int arg0) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void inputEnded() {
 		// TODO Auto-generated method stub
 
@@ -71,8 +72,9 @@ public class MainMenu implements GameState {
 	}
 
 	@Override
-	public void keyPressed(int arg0, char arg1) {
-		// TODO Auto-generated method stub
+	public void keyPressed(int key, char c) 
+	{
+		
 
 	}
 
@@ -143,39 +145,45 @@ public class MainMenu implements GameState {
 	}
 
 	@Override
-	public void enter(GameContainer arg0, StateBasedGame arg1) throws SlickException {
-		// TODO Auto-generated method stub
+	public void enter(GameContainer gameContainer, StateBasedGame game) throws SlickException 
+	{
+		if(keyPressed
+		
 
 	}
 
-	@Override
-	public int getID() {
-		// TODO Auto-generated method stub
-		return 
-	}
 
-	@Override
-	public void init(GameContainer arg0, StateBasedGame arg1) throws SlickException {
-		// TODO Auto-generated method stub
+	public void init(GameContainer gameContainer, StateBasedGame game) throws SlickException {
+		this.game = game;
+		
+		
 
 	}
+	
 
-	@Override
 	public void leave(GameContainer arg0, StateBasedGame arg1) throws SlickException {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void render(GameContainer arg0, StateBasedGame arg1, Graphics arg2) throws SlickException {
-		// TODO Auto-generated method stub
+	public void render(GameContainer gameContainer, StateBasedGame game, Graphics g) throws SlickException {
+		g.setBackground(Color.black);
+		g.setColor(Color.white);
+		g.drawString("The Amazing Adventure",100,50);
 
 	}
 
 	@Override
-	public void update(GameContainer arg0, StateBasedGame arg1, int arg2) throws SlickException {
-		// TODO Auto-generated method stub
+	public void update(GameContainer gameContainer, StateBasedGame game, int delta) throws SlickException {
+		
 
+	}
+
+	@Override
+	public void mouseWheelMoved(int arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

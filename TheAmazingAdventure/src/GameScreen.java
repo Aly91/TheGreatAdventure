@@ -8,6 +8,9 @@ import org.newdawn.slick.state.StateBasedGame;
 public class GameScreen implements GameState {
 	
 	public final int stateID = 1;
+	int lives = 4;
+	public final double  timeToComplete = 10.00; 
+	private StateBasedGame game;
 	public void mouseClicked(int arg0, int arg1, int arg2, int arg3) {
 		// TODO Auto-generated method stub
 
@@ -152,8 +155,8 @@ public class GameScreen implements GameState {
 	}
 
 	@Override
-	public void init(GameContainer arg0, StateBasedGame arg1) throws SlickException {
-		// TODO Auto-generated method stub
+	public void init(GameContainer gameContainer, StateBasedGame game) throws SlickException {
+	this.game = game;
 
 	}
 
@@ -166,7 +169,7 @@ public class GameScreen implements GameState {
 	@Override
 	public void render(GameContainer arg0, StateBasedGame arg1, Graphics arg2) throws SlickException {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 	@Override

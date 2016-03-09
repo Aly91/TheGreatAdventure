@@ -2,4 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="org.newdawn.slick.state.StateBasedGame"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.AppGameContainer"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
 </qualifiedTypeNameHistroy>
