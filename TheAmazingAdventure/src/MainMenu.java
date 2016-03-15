@@ -5,47 +5,21 @@ import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.GameState;
 import org.newdawn.slick.state.StateBasedGame;
-import java.awt.font.*;
+
+import java.awt.Font;
+
 
 public class MainMenu implements GameState {
-	
+
 	public final int stateID = 0;
 	private StateBasedGame game;
+
 	
 	public int getID()
 	{
 		return stateID;
 	}
 
-	@Override
-	public void mouseClicked(int arg0, int arg1, int arg2, int arg3) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void mouseDragged(int arg0, int arg1, int arg2, int arg3) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void mouseMoved(int arg0, int arg1, int arg2, int arg3) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void mousePressed(int arg0, int arg1, int arg2) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void mouseReleased(int arg0, int arg1, int arg2) {
-		// TODO Auto-generated method stub
-
-	}
 
 	@Override
 	public void inputEnded() {
@@ -79,8 +53,15 @@ public class MainMenu implements GameState {
 	}
 
 	@Override
-	public void keyReleased(int arg0, char arg1) {
-		// TODO Auto-generated method stub
+	public void keyReleased(int keyPress, char c) {
+		
+		switch(keyPress)
+		{
+		case Input.KEY_SPACE:
+			game.enterState(1);
+		break;
+		}
+		
 
 	}
 
@@ -147,7 +128,6 @@ public class MainMenu implements GameState {
 	@Override
 	public void enter(GameContainer gameContainer, StateBasedGame game) throws SlickException 
 	{
-		if(keyPressed
 		
 
 	}
@@ -155,9 +135,9 @@ public class MainMenu implements GameState {
 
 	public void init(GameContainer gameContainer, StateBasedGame game) throws SlickException {
 		this.game = game;
-		
-		
+	   Font font = new Font("Arial", Font.PLAIN, 20);
 
+		
 	}
 	
 
@@ -170,8 +150,8 @@ public class MainMenu implements GameState {
 	public void render(GameContainer gameContainer, StateBasedGame game, Graphics g) throws SlickException {
 		g.setBackground(Color.black);
 		g.setColor(Color.white);
-		g.drawString("The Amazing Adventure",100,50);
-
+		g.drawString("The Amazing Adventure",150,50);
+		g.drawString("Press space to begin", 150, 100);
 	}
 
 	@Override
@@ -182,6 +162,41 @@ public class MainMenu implements GameState {
 
 	@Override
 	public void mouseWheelMoved(int arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void mouseClicked(int arg0, int arg1, int arg2, int arg3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void mouseDragged(int arg0, int arg1, int arg2, int arg3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void mouseMoved(int arg0, int arg1, int arg2, int arg3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void mousePressed(int arg0, int arg1, int arg2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void mouseReleased(int arg0, int arg1, int arg2) {
 		// TODO Auto-generated method stub
 		
 	}
