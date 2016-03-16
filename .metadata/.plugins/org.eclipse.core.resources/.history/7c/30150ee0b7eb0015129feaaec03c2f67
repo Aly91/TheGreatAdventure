@@ -159,8 +159,6 @@ public class GameScreen implements GameState {
 	@Override
 	public void init(GameContainer gameContainer, StateBasedGame game) throws SlickException {
 	this.game = game;
-	game.getState(Game.gameScreen);
-
 
 
 	}
@@ -170,19 +168,19 @@ public class GameScreen implements GameState {
 	
 	if(lives == 0)
 		{
-		  game.getState(Game.gameOver);
+		  game.getState(2);
 		}
 	}
 	
 
 	@Override
 	public void render(GameContainer gameContainer, StateBasedGame game, Graphics g) throws SlickException {
-	 g.drawLine(100, 100, 100, 100);
+	
 		
 	}
 
 	@Override
-	public void update(GameContainer gameContainer, StateBasedGame game, int delta) throws SlickException {
+	public void update(GameContainer arg0, StateBasedGame arg1, int arg2) throws SlickException {
 		// TODO Auto-generated method stub
 
 	}

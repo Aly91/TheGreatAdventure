@@ -8,7 +8,7 @@ public class Game extends StateBasedGame {
 //Game properties 
 	public static final int height = 500;
 	public static final int width = 500;
-	public static final int frameRate = 100;
+	public static final int frameRate = 60;
 	
 //Game states 
 	public static final int mainMenu = 0;
@@ -22,7 +22,7 @@ public class Game extends StateBasedGame {
 	}
 	
 	//Initialize game states 
-	public void initStatesList(GameContainer gameContainer) throws SlickException
+	public void initStatesList(GameContainer gameContainer) 
 	{
 	    addState(new MainMenu());
 		addState(new GameScreen());

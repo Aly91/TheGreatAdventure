@@ -1,5 +1,4 @@
-
-
+import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
@@ -7,46 +6,21 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.GameState;
 import org.newdawn.slick.state.StateBasedGame;
 
-public class GameScreen implements GameState {
-	
-	public final int stateID = 1;
-	int lives = 4;
-	public final double  timeToComplete = 10.00; 
+import java.awt.Font;
+
+
+public class MainMenu implements GameState
+{
+
+	public final int stateID = 0;
 	private StateBasedGame game;
-	public void mouseClicked(int arg0, int arg1, int arg2, int arg3) {
-		// TODO Auto-generated method stub
 
+	
+	public int getID()
+	{
+		return stateID;
 	}
 
-	@Override
-	public void mouseDragged(int arg0, int arg1, int arg2, int arg3) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void mouseMoved(int arg0, int arg1, int arg2, int arg3) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void mousePressed(int arg0, int arg1, int arg2) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void mouseReleased(int arg0, int arg1, int arg2) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void mouseWheelMoved(int arg0) {
-		// TODO Auto-generated method stub
-
-	}
 
 	@Override
 	public void inputEnded() {
@@ -73,17 +47,22 @@ public class GameScreen implements GameState {
 	}
 
 	@Override
-	public void keyPressed(int arg0, char arg1) {
-		// TODO Auto-generated method stub
+	public void keyPressed(int keyPress, char c) 
+	{
+		
+		switch(keyPress)
+		{
+		case Input.KEY_ENTER:
+			game.enterState(1);
+		break;
+		
+		case Input.KEY_ESCAPE:
+			System.exit(0);
+		}
 
 	}
 
-	@Override
-	public void keyReleased(int arg0, char arg1) {
-		// TODO Auto-generated method stub
-
-	}
-
+	
 	@Override
 	public void controllerButtonPressed(int arg0, int arg1) {
 		// TODO Auto-generated method stub
@@ -145,46 +124,87 @@ public class GameScreen implements GameState {
 	}
 
 	@Override
-	public void enter(GameContainer arg0, StateBasedGame arg1) throws SlickException {
-		// TODO Auto-generated method stub
+	public void enter(GameContainer gameContainer, StateBasedGame game) throws SlickException 
+	{
+		
 
 	}
 
-	@Override
-	public int getID() {
-		// TODO Auto-generated method stub
-		return stateID;
-	}
 
-	@Override
 	public void init(GameContainer gameContainer, StateBasedGame game) throws SlickException {
-	this.game = game;
-	game.getState(Game.gameScreen);
+		this.game = game;
+	 
 
-
-
-	}
-
-	@Override
-	public void leave(GameContainer gameContainer, StateBasedGame game) throws SlickException {
-	
-	if(lives == 0)
-		{
-		  game.getState(Game.gameOver);
-		}
+		
 	}
 	
+
+	public void leave(GameContainer arg0, StateBasedGame arg1) throws SlickException {
+		// TODO Auto-generated method stub
+
+	}
 
 	@Override
 	public void render(GameContainer gameContainer, StateBasedGame game, Graphics g) throws SlickException {
-	 g.drawLine(100, 100, 100, 100);
-		
+		g.setBackground(Color.black);
+		g.setColor(Color.white);
+		//g.setFont("Arial", 20);
+		g.drawString("The Amazing Adventure",150,50);
+		g.drawString("Press space to begin", 150, 100);
 	}
 
 	@Override
 	public void update(GameContainer gameContainer, StateBasedGame game, int delta) throws SlickException {
-		// TODO Auto-generated method stub
+		
 
+	}
+
+	@Override
+	public void mouseWheelMoved(int arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void mouseClicked(int arg0, int arg1, int arg2, int arg3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void mouseDragged(int arg0, int arg1, int arg2, int arg3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void mouseMoved(int arg0, int arg1, int arg2, int arg3) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void mousePressed(int arg0, int arg1, int arg2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void mouseReleased(int arg0, int arg1, int arg2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void keyReleased(int arg0, char arg1) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

@@ -7,4 +7,7 @@
 <fullyQualifiedTypeName name="java.awt.Image"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Input"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.state.transition.FadeInTransition"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.state.transition.FadeOutTransition"/>
 </qualifiedTypeNameHistroy>

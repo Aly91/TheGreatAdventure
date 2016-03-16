@@ -202,7 +202,6 @@ public class MainMenu implements GameState
 		
 		case Input.KEY_ESCAPE:
 			System.exit(0);
-		break;
 		}
 
 		
