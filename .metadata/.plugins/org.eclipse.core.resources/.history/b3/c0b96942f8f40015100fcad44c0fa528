@@ -141,16 +141,20 @@ public class MainMenu implements GameState
 		g.setColor(Color.white);
 		//g.setFont("Arial", 20);
 		g.drawString("The Amazing Adventure",150,50);
-		g.drawString("Press enter to begin", 150, 100);
+		g.drawString("Press space to begin", 150, 100);
 	}
 
 	@Override
 	public void update(GameContainer gameContainer, StateBasedGame game, int delta) throws SlickException {
 		
-		if(gameContainer.getInput().isKeyPressed(Input.KEY_ENTER))
+		int keyPress = 0;
+		
+		if (keyPress == Input.KEY_ENTER)
 		{
-			  game.enterState(Game.gameScreen, new FadeOutTransition(Color.darkGray), new FadeInTransition (Color.black));
+			game.enterState(Game.gameScreen, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
+		
 		}
+
 		
 		
 
@@ -198,17 +202,9 @@ public class MainMenu implements GameState
 	}
 
 
-
-	public void keyReleased() {
-		
-		
-		
-	}
-
-
 	@Override
-	public void keyReleased(int arg0, char arg1) {
-		// TODO Auto-generated method stub
+	public void keyReleased(int keyPress, char c) {
+		
 		
 	}
 

@@ -141,7 +141,7 @@ public class MainMenu implements GameState
 		g.setColor(Color.white);
 		//g.setFont("Arial", 20);
 		g.drawString("The Amazing Adventure",150,50);
-		g.drawString("Press enter to begin", 150, 100);
+		g.drawString("Press space to begin", 150, 100);
 	}
 
 	@Override
@@ -149,7 +149,7 @@ public class MainMenu implements GameState
 		
 		if(gameContainer.getInput().isKeyPressed(Input.KEY_ENTER))
 		{
-			  game.enterState(Game.gameScreen, new FadeOutTransition(Color.darkGray), new FadeInTransition (Color.black));
+			  game.enterState(Game.gameScreen);
 		}
 		
 		

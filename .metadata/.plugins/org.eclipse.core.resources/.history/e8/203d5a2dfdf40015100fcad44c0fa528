@@ -1,8 +1,5 @@
 
 
-import java.io.File;
-import java.io.FileReader;
-
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -161,15 +158,13 @@ public class GameScreen implements GameState {
 		return stateID;
 	}
 
-	
+	@Override
 	public void init(GameContainer gameContainer, StateBasedGame game) throws SlickException {
 	this.game = game;
 	game.getState(Game.gameScreen);
-	}
 
-	private void loadData() {
-		FileReader reader = new FileReader("data.xml");
-	
+
+
 	}
 
 	@Override
@@ -184,7 +179,6 @@ public class GameScreen implements GameState {
 	 g.setBackground(Color.black);
 	 g.setColor(Color.white);
 	 g.drawLine(200, 100, 100, 100);
-	 g.drawString("Time to Complete : " + timeToComplete, 50,200);
 
 		
 	}
