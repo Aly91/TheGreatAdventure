@@ -1,3 +1,5 @@
+
+
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -8,7 +10,7 @@ import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.state.transition.FadeInTransition;
 import org.newdawn.slick.state.transition.FadeOutTransition;
 
-import java.awt.Font;
+//import org.newdawn.slick.font.effects.*;;
 
 
 public class MainMenu implements GameState
@@ -137,9 +139,8 @@ public class MainMenu implements GameState
 
 	@Override
 	public void render(GameContainer gameContainer, StateBasedGame game, Graphics g) throws SlickException {
-		g.setBackground(Color.black);
+		g.setBackground(Color.cyan);
 		g.setColor(Color.white);
-		//g.setFont("Arial", 20);
 		g.drawString("The Amazing Adventure",150,50);
 		g.drawString("Press enter to begin", 150, 100);
 	}
@@ -149,7 +150,7 @@ public class MainMenu implements GameState
 		
 		if(gameContainer.getInput().isKeyPressed(Input.KEY_ENTER))
 		{
-			  game.enterState(Game.gameScreen, new FadeOutTransition(Color.darkGray), new FadeInTransition (Color.black));
+			  game.enterState(Game.gameScreen, new FadeOutTransition(Color.black), new FadeInTransition (Color.black));
 		}
 		
 		
