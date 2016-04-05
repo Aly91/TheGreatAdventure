@@ -3,6 +3,7 @@
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.GameState;
@@ -139,10 +140,14 @@ public class MainMenu implements GameState
 
 	@Override
 	public void render(GameContainer gameContainer, StateBasedGame game, Graphics g) throws SlickException {
-		g.setBackground(Color.cyan);
+		/*g.setBackground(Color.cyan);
 		g.setColor(Color.white);
 		g.drawString("The Amazing Adventure",150,50);
 		g.drawString("Press enter to begin", 150, 100);
+		*/
+		Image menuScreen = new Image ("mainMenu.jpg");
+		
+		g.drawImage(menuScreen, 0,0);
 	}
 
 	@Override
@@ -153,8 +158,6 @@ public class MainMenu implements GameState
 			  game.enterState(Game.gameScreen, new FadeOutTransition(Color.black), new FadeInTransition (Color.black));
 		}
 		
-		
-
 	}
 
 	@Override

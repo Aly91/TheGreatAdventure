@@ -8,13 +8,10 @@
 <fullyQualifiedTypeName name="org.newdawn.slick.Input"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.state.transition.FadeInTransition"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.state.transition.FadeOutTransition"/>
-<fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
-<fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.svg.InkscapeLoader"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.svg.SimpleDiagramRenderer"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.svg.Diagram"/>
-<fullyQualifiedTypeName name="org.newdawn.slick.Image"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.Font"/>
 <fullyQualifiedTypeName name="java.awt.Font"/>
 <fullyQualifiedTypeName name="javax.xml.parsers.DocumentBuilderFactory"/>
@@ -24,4 +21,8 @@
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="javax.lang.model.element.Element"/>
 <fullyQualifiedTypeName name="org.w3c.dom.NodeList"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Image"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="javax.xml.soap.Node"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
 </qualifiedTypeNameHistroy>

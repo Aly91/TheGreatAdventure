@@ -5,7 +5,6 @@ import javax.lang.model.element.Element;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.soap.Node;
 
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
@@ -63,29 +62,6 @@ public class Game extends StateBasedGame {
 			File levelsInput  = new File("game.xml");
 			DocumentBuilder db = dbf.newDocumentBuilder();
 		    Document dom = db.parse(levelsInput);
-		    
-		     dom.getDocumentElement().normalize();
-		     dom.getDocumentElement().getNodeName();
-		    		
-		    		NodeList nList = dom.getElementsByTagName("levels");
-		    		
-		    		if(nList != null && nList.getLength() >0)
-		    		{
-		    			for(int temp = 0; temp <nList.getLength(); temp ++)
-		    			{
-		    				Node node = (Node) nList.item(temp);
-		    				
-		    				node.getNodeName();
-		    				
-		    				if(node.getNodeType() == Node.ELEMENT_NODE)
-		    				{
-		    					Element levelE = (Element) node;
-		    					
-		    					levelE.getEnclosedElements();
-		    				}
-		    				
-		    			}
-		    		}
 		}catch(ParserConfigurationException pce){
 			
 			pce.printStackTrace();
@@ -101,11 +77,26 @@ public class Game extends StateBasedGame {
 		
 			
 		}
+	
+	private void parseGameData(Document dom)
+	{
+		Element  gameE =  dom.getDocumentElement();
+		
+		NodeList nList = gameE.getName("level");
+		
+		if(nList != null && nList.getLength() >0)
+		{
+			for(int i = 0; i<nList.getLength(); i++)
+			{
+				
+			}
+		}
+	}
 		
 	
 		
 	}
-
+}
 
 	
 

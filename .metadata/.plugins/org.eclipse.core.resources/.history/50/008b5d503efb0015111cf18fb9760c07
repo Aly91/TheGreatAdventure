@@ -5,7 +5,6 @@ import javax.lang.model.element.Element;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.soap.Node;
 
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
@@ -71,18 +70,8 @@ public class Game extends StateBasedGame {
 		    		
 		    		if(nList != null && nList.getLength() >0)
 		    		{
-		    			for(int temp = 0; temp <nList.getLength(); temp ++)
+		    			for(int i = 0; i<nList.getLength(); i++)
 		    			{
-		    				Node node = (Node) nList.item(temp);
-		    				
-		    				node.getNodeName();
-		    				
-		    				if(node.getNodeType() == Node.ELEMENT_NODE)
-		    				{
-		    					Element levelE = (Element) node;
-		    					
-		    					levelE.getEnclosedElements();
-		    				}
 		    				
 		    			}
 		    		}

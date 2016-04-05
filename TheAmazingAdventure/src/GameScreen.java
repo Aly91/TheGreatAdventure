@@ -5,8 +5,7 @@ import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.GameState;
 import org.newdawn.slick.state.StateBasedGame;
-import org.newdawn.slick.svg.InkscapeLoader;
-import org.newdawn.slick.svg.SimpleDiagramRenderer;
+
 
 
 public class GameScreen implements GameState {
@@ -178,8 +177,6 @@ public class GameScreen implements GameState {
      
      
    
-     
-	 
 	}
 
 	@Override

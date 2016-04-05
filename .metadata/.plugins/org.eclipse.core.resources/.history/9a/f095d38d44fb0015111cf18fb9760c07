@@ -82,6 +82,7 @@ public class Game extends StateBasedGame {
 		    					Element levelE = (Element) node;
 		    					
 		    					levelE.getEnclosedElements();
+		    				
 		    				}
 		    				
 		    			}
