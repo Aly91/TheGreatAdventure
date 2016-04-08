@@ -121,6 +121,7 @@ public class GameOver implements GameState {
 	@Override
 	public void init(GameContainer gameContainer, StateBasedGame game) throws SlickException {
 		this.game = game;
+		game.getState(Game.gameOver);
 
 	}
 

@@ -35,6 +35,8 @@ public class Game extends StateBasedGame {
 		
 	}
 	
+	
+	
 	//Initialize game states 
 	public void initStatesList(GameContainer gameContainer) throws SlickException
 	{
@@ -50,6 +52,7 @@ public class Game extends StateBasedGame {
 			AppGameContainer gameContainer = new AppGameContainer(new Game());
 			gameContainer.setDisplayMode(height, width, false);
 			gameContainer.setTargetFrameRate(frameRate);
+			gameContainer.setAlwaysRender(true);
 			gameContainer.start();
 		}
 		catch(SlickException e)
@@ -69,8 +72,6 @@ public class Game extends StateBasedGame {
 		    		
 		    		NodeList nList = dom.getElementsByTagName("levels");
 		    		
-		    		if(nList != null && nList.getLength() >0)
-		    		{
 		    			for(int temp = 0; temp <nList.getLength(); temp ++)
 		    			{
 		    				Node node = (Node) nList.item(temp);
@@ -80,31 +81,22 @@ public class Game extends StateBasedGame {
 		    				if(node.getNodeType() == Node.ELEMENT_NODE)
 		    				{
 		    					Element levelE = (Element) node;
-		    					
 		    					levelE.getEnclosedElements();
+		    				
 		    				}
 		    				
+		    		
 		    			}
-		    		}
-		}catch(ParserConfigurationException pce){
-			
-			pce.printStackTrace();
-		}
-		catch(SAXException se){
-			
-			se.printStackTrace();
-		}
-		catch(IOException ioe){
-			
-			ioe.printStackTrace();
+		}catch(Exception e)
+		{
+			e.printStackTrace();
 		}
 		
-			
-		}
 		
 	
 		
 	}
+}
 
 
 	

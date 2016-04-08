@@ -3,7 +3,6 @@
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.GameState;
@@ -123,13 +122,11 @@ public class MainMenu implements GameState
 		
 
 	}
-
+	 
 
 	public void init(GameContainer gameContainer, StateBasedGame game) throws SlickException {
 		this.game = game;
-	 
-
-		
+		game.getState(Game.mainMenu);	
 	}
 	
 
@@ -140,15 +137,14 @@ public class MainMenu implements GameState
 
 	@Override
 	public void render(GameContainer gameContainer, StateBasedGame game, Graphics g) throws SlickException {
-		/*g.setBackground(Color.cyan);
-		g.setColor(Color.white);
-		g.drawString("The Amazing Adventure",150,50);
-		g.drawString("Press enter to begin", 150, 100);
-		*/
-		Image menuScreen = new Image ("mainMenu.jpg");
 		
-		g.drawImage(menuScreen, 0,0);
-	}
+		//Image menuScreen = new Image ("mainMenu.jpg");
+		
+		//g.drawImage(menuScreen, 0,0);
+		
+		g.drawString(" '10 out of 10' - IGN",310,350); 
+		g.setColor(Color.white);
+		}
 
 	@Override
 	public void update(GameContainer gameContainer, StateBasedGame game, int delta) throws SlickException {
@@ -156,6 +152,10 @@ public class MainMenu implements GameState
 		if(gameContainer.getInput().isKeyPressed(Input.KEY_ENTER))
 		{
 			  game.enterState(Game.gameScreen, new FadeOutTransition(Color.black), new FadeInTransition (Color.black));
+		}
+		if(gameContainer.getInput().isKeyPressed(Input.KEY_Q))
+		{
+			gameContainer.exit();
 		}
 		
 	}
