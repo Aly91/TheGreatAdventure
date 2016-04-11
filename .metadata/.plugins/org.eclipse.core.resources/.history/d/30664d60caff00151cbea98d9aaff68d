@@ -1,9 +1,6 @@
 
-import java.util.ArrayList;
-
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Image;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.GameState;
@@ -11,7 +8,7 @@ import org.newdawn.slick.state.StateBasedGame;
 
 
 
-public class GameScreen implements GameState{
+public class GameScreen implements GameState {
 	
 
 	
@@ -20,13 +17,10 @@ public class GameScreen implements GameState{
 	//float x = 0.0f;
 	//float y = 0.0f;
 	
-	
-	public void PowerUps()
+	public void Player()
 	{
-		boolean PUpGrabbed = false;
-		boolean lifeGrabbed = false;
-		Image powerUp = new Image ("powerup.jpg");
-		Image newLife = new Image ("1up.jpg");
+		int[] lives = new int[20];
+		Image player = new Image("player.jpg");
 		
 	}
 	
@@ -181,7 +175,7 @@ public class GameScreen implements GameState{
 	this.game = game;
 	game.getState(Game.gameScreen);
 	gameContainer.getInput().enableKeyRepeat();
-	Player player = new Player();
+	
 	}
 
 	@Override

@@ -20,13 +20,25 @@ public class GameScreen implements GameState{
 	//float x = 0.0f;
 	//float y = 0.0f;
 	
+	public void Player()
+	{
+		try {
+			Image player = new Image("player.jpg");
+			ArrayList<Integer> lives = new ArrayList<Integer>();
+			lives.add(1);
+			lives.add(2);
+			lives.add(3);
+			lives.add(4);	
+		
+		} catch (SlickException e) {
+			e.printStackTrace();}
+	}
+		
 	
 	public void PowerUps()
 	{
 		boolean PUpGrabbed = false;
 		boolean lifeGrabbed = false;
-		Image powerUp = new Image ("powerup.jpg");
-		Image newLife = new Image ("1up.jpg");
 		
 	}
 	

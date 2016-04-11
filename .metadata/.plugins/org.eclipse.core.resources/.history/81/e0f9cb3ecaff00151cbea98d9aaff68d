@@ -162,7 +162,6 @@ public class MainMenu implements GameState
 		
 		if(gameContainer.getInput().isKeyPressed(Input.KEY_1))
 		{
-			
 		}
 		
 		else if(gameContainer.getInput().isKeyPressed(Input.KEY_2))

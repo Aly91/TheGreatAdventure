@@ -20,13 +20,12 @@ public class GameScreen implements GameState{
 	//float x = 0.0f;
 	//float y = 0.0f;
 	
-	
-	public void PowerUps()
+	public void Player()
 	{
-		boolean PUpGrabbed = false;
-		boolean lifeGrabbed = false;
-		Image powerUp = new Image ("powerup.jpg");
-		Image newLife = new Image ("1up.jpg");
+		Image player;
+		ArrayList<Integer> lives = new ArrayList<Integer>();
+		lives.add(1);
+		lives.add(2);
 		
 	}
 	
@@ -181,7 +180,9 @@ public class GameScreen implements GameState{
 	this.game = game;
 	game.getState(Game.gameScreen);
 	gameContainer.getInput().enableKeyRepeat();
-	Player player = new Player();
+	lives[] = 4;
+	
+		
 	}
 
 	@Override

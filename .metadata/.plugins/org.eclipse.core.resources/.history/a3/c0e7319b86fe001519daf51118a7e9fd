@@ -158,22 +158,7 @@ public class MainMenu implements GameState
 			gameContainer.exit();
 		}
 		
-		//This next control block is for allowing players to select their chosen level before they begin
-		
-		if(gameContainer.getInput().isKeyPressed(Input.KEY_1))
-		{
-			
-		}
-		
-		else if(gameContainer.getInput().isKeyPressed(Input.KEY_2))
-		{
-		}
-		
-		else if(gameContainer.getInput().isKeyPressed(Input.KEY_3))
-		{
-		}
-		
-		
+		//This next control block is for 		
 	}
 
 	@Override

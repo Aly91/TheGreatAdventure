@@ -148,7 +148,7 @@ public class MainMenu implements GameState
 
 	@Override
 	public void update(GameContainer gameContainer, StateBasedGame game, int delta) throws SlickException {
-		//Controls for beginning and exiting game from main menu. Fairly self-explanatory.
+		//Controls for beginning and exiting game from main menu. Fairly self-explanitary 
 		if(gameContainer.getInput().isKeyPressed(Input.KEY_ENTER))
 		{
 			  game.enterState(Game.gameScreen, new FadeOutTransition(Color.black), new FadeInTransition (Color.black));
@@ -157,22 +157,6 @@ public class MainMenu implements GameState
 		{
 			gameContainer.exit();
 		}
-		
-		//This next control block is for allowing players to select their chosen level before they begin
-		
-		if(gameContainer.getInput().isKeyPressed(Input.KEY_1))
-		{
-			
-		}
-		
-		else if(gameContainer.getInput().isKeyPressed(Input.KEY_2))
-		{
-		}
-		
-		else if(gameContainer.getInput().isKeyPressed(Input.KEY_3))
-		{
-		}
-		
 		
 	}
 
