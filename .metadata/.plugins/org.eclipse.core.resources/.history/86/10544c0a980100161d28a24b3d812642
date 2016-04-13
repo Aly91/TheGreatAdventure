@@ -1,5 +1,5 @@
 
-
+import java.util.ArrayList;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -173,8 +173,6 @@ public class GameScreen implements GameState{
 	game.getState(Game.gameScreen);
 	gameContainer.getInput().enableKeyRepeat();
 	Player player = new Player();
-	
-
 	}
 
 	@Override
@@ -185,12 +183,8 @@ public class GameScreen implements GameState{
 
 	public void render(GameContainer gameContainer, StateBasedGame game, Graphics g) throws SlickException {
      
-		
-     Image background = new Image("background.png");
+		//g.
      
-    g.drawImage(background,0,0);
-    
-    player
    
 	}
 

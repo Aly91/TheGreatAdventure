@@ -1,0 +1,15 @@
+import org.newdawn.slick.Image;
+
+public class PowerUps {
+
+	public PowerUps()
+	{
+		boolean PUpGrabbed = false;
+		boolean lifeGrabbed = false;
+		
+		
+		
+		
+	}
+	
+}

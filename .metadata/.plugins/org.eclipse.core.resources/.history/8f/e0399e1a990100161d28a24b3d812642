@@ -186,11 +186,9 @@ public class GameScreen implements GameState{
 	public void render(GameContainer gameContainer, StateBasedGame game, Graphics g) throws SlickException {
      
 		
-     Image background = new Image("background.png");
+     Image background = new Image("background.jpg");
      
     g.drawImage(background,0,0);
-    
-    player
    
 	}
 

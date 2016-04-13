@@ -189,8 +189,6 @@ public class GameScreen implements GameState{
      Image background = new Image("background.png");
      
     g.drawImage(background,0,0);
-    
-    player
    
 	}
 

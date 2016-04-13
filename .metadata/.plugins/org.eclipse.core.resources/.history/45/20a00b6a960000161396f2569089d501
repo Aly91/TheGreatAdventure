@@ -1,5 +1,5 @@
 
-
+import java.util.ArrayList;
 
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
@@ -21,6 +21,14 @@ public class GameScreen implements GameState{
 	//float y = 0.0f;
 	
 	
+	public void PowerUps()
+	{
+		boolean PUpGrabbed = false;
+		boolean lifeGrabbed = false;
+		Image powerUp = new Image ("powerup.jpg");
+		Image newLife = new Image ("1up.jpg");
+		
+	}
 	
 	
 
@@ -143,6 +151,7 @@ public class GameScreen implements GameState{
 		// TODO Auto-generated method stub
 
 	}
+
 	@Override
 	public void controllerUpPressed(int arg0) {
 		// TODO Auto-generated method stub
@@ -173,8 +182,6 @@ public class GameScreen implements GameState{
 	game.getState(Game.gameScreen);
 	gameContainer.getInput().enableKeyRepeat();
 	Player player = new Player();
-	
-
 	}
 
 	@Override
@@ -185,12 +192,8 @@ public class GameScreen implements GameState{
 
 	public void render(GameContainer gameContainer, StateBasedGame game, Graphics g) throws SlickException {
      
-		
-     Image background = new Image("background.png");
+		//g.
      
-    g.drawImage(background,0,0);
-    
-    player
    
 	}
 
