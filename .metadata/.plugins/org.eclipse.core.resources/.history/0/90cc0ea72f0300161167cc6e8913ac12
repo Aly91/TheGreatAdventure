@@ -1,0 +1,23 @@
+public class Enemy 
+{
+
+	float eShipX;
+	float eShipY;
+	float enemyX;
+	float enemyY;
+	
+	public Enemy()
+	{
+	
+		eShipX = 100;
+		eShipY = 55;
+		
+		enemyX = width/2;
+		enemyY = height/2;
+		
+		
+	}
+	
+	
+
+}
