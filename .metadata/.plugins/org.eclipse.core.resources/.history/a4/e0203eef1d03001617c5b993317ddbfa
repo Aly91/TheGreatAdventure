@@ -23,9 +23,6 @@ public  class Player extends Game
 	  shipX =100;
 	  shipY = 50;
 	  
-	  playerX = width /2;
-	  playerY = height / 2;
-	  
 	 
 	  
 	  lives = new int[10];
@@ -40,7 +37,7 @@ public  class Player extends Game
 	{
 		Polygon playerShip = new Polygon();
 		playerShip.closed();
-		playerShip.addPoint(shipX,shipY);
+		playerShip.addPoint(x, y);
 		g.setColor(Color.pink);
 		g.draw(playerShip);
 		
@@ -65,25 +62,8 @@ public  class Player extends Game
 			
 			if(gameContainer.getInput().isKeyPressed(Input.KEY_UP))
 			{
-			   playerY --;
+			   y ++;
 				
-			}
-			
-			if(gameContainer.getInput().isKeyPressed(Input.KEY_DOWN))
-			{
-				playerY ++;
-			}
-			
-			if(gameContainer.getInput().isKeyPressed(Input.KEY_RIGHT))
-			{
-				playerX =+ 1;
-				
-			}
-			
-			if(gameContainer.getInput().isKeyPressed(Input.KEY_LEFT))
-			{
-				playerX =- 1;
-			}
 			}
 			
 		}
@@ -91,4 +71,4 @@ public  class Player extends Game
 
 		
 	}
-
+}

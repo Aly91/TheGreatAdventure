@@ -10,23 +10,16 @@ import org.newdawn.slick.geom.Polygon;
 
 public  class Player extends Game
 {
-	float shipX;
-	float shipY;
-	float playerX;
-	float playerY;
+	float x;
+	float y;
 	int[] lives;
 	int[] bullets;
 	
   public Player() 
   {
 	  
-	  shipX =100;
-	  shipY = 50;
-	  
-	  playerX = width /2;
-	  playerY = height / 2;
-	  
-	 
+	  x = 50;
+	  y = 50;
 	  
 	  lives = new int[10];
 	  bullets = new int[100];
@@ -39,8 +32,7 @@ public  class Player extends Game
 	public void render(GameContainer gameContainer, StateBasedGame game, Graphics g) throws SlickException
 	{
 		Polygon playerShip = new Polygon();
-		playerShip.closed();
-		playerShip.addPoint(shipX,shipY);
+		playerShip.addPoint(x, y);
 		g.setColor(Color.pink);
 		g.draw(playerShip);
 		
@@ -63,32 +55,9 @@ public  class Player extends Game
 				}
 			}
 			
-			if(gameContainer.getInput().isKeyPressed(Input.KEY_UP))
-			{
-			   playerY --;
-				
-			}
-			
-			if(gameContainer.getInput().isKeyPressed(Input.KEY_DOWN))
-			{
-				playerY ++;
-			}
-			
-			if(gameContainer.getInput().isKeyPressed(Input.KEY_RIGHT))
-			{
-				playerX =+ 1;
-				
-			}
-			
-			if(gameContainer.getInput().isKeyPressed(Input.KEY_LEFT))
-			{
-				playerX =- 1;
-			}
-			}
-			
 		}
 	
 
 		
 	}
-
+}

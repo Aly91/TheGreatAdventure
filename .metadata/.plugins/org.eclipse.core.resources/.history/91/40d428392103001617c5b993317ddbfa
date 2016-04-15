@@ -41,6 +41,7 @@ public  class Player extends Game
 		Polygon playerShip = new Polygon();
 		playerShip.closed();
 		playerShip.addPoint(shipX,shipY);
+		playerShip.transform(null);
 		g.setColor(Color.pink);
 		g.draw(playerShip);
 		

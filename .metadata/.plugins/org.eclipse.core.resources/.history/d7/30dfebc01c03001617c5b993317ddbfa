@@ -206,7 +206,7 @@ public class GameScreen implements GameState{
 			gameContainer.resume();
 		}
 		
-		player.update(gameContainer, game, null);
+		//player.update(gameContainer, game);
 		
 		
 		//if statements for character control
