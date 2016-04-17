@@ -1,12 +1,13 @@
-
 import org.newdawn.slick.AppGameContainer;
-import org.newdawn.slick.Color;
+
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Polygon;
+
+import org.newdawn.slick.Color;
 
 public class Player extends Game
 {
@@ -44,9 +45,14 @@ public class Player extends Game
 		g.setColor(Color.pink);
 		g.draw(playerShip);
 		
+		g.drawString("Lives : " + lives,20,10);
+		
+		g.drawString("Ammo : " +bullets, 25,10);
+		
 	}
+
 	
-	public void update(GameContainer gameContainer, StateBasedGame game, Graphics g) throws SlickException
+	public void update(GameContainer gameContainer, StateBasedGame game, Graphics g, int delta) throws SlickException
 	{
 		if(gameContainer.getInput().isKeyPressed(Input.KEY_S))
 		{
@@ -84,11 +90,9 @@ public class Player extends Game
 			{
 				playerX =- 1;
 			}
-			}
+			
 			
 		}
-	
-
-		
 	}
-
+	
+}

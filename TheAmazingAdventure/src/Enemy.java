@@ -17,6 +17,7 @@ public class Enemy
 	
 	
 	
+	
 	public Enemy()
 	{
 	
@@ -30,15 +31,22 @@ public class Enemy
 
 	public void render()
 	{
+		
 	}
 	
 	public void update()
 	{
+		for (int eBullets bullet : eBullets)
+		{
+		
+		}
 	}
-	}
+	
+	
+}
 	
 	
 	
 	
 
-}
+

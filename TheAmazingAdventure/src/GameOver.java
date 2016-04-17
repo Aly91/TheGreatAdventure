@@ -12,26 +12,7 @@ public class GameOver implements GameState {
 	
 	public final int stateID = 2;
 	private StateBasedGame game;
-
-
-
-	@Override
-	public void inputEnded() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void inputStarted() {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public boolean isAcceptingInput() {
-		// TODO Auto-generated method stub
-		return false;
-	}
+	
 
 	@Override
 	public void setInput(Input arg0) {
@@ -118,20 +99,16 @@ public class GameOver implements GameState {
 		return stateID;
 	}
 
-	@Override
+
 	public void init(GameContainer gameContainer, StateBasedGame game) throws SlickException {
 		this.game = game;
 		game.getState(Game.gameOver);
 
 	}
 
-	@Override
-	public void leave(GameContainer arg0, StateBasedGame arg1) throws SlickException {
+
+	//public void leave(GameContainer arg0, StateBasedGame arg1) throws SlickException {
 		// TODO Auto-generated method stub
-
-	}
-
-	@Override
 	public void render(GameContainer gameContainer, StateBasedGame game, Graphics g) throws SlickException {
 		 g.setBackground(Color.black);
 		 g.drawString("Game Over",200,250);
@@ -196,6 +173,24 @@ public class GameOver implements GameState {
 	public void enter(GameContainer arg0, StateBasedGame arg1) throws SlickException {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void inputEnded() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void inputStarted() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean isAcceptingInput() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }

@@ -43,6 +43,7 @@ public class Game extends StateBasedGame {
 	    addState(new MainMenu());
 		addState(new GameScreen());
 		addState(new GameOver());
+		gameContainer.setShowFPS(false);
 	}
 		
 	public static void main(String[] args) 
@@ -54,6 +55,7 @@ public class Game extends StateBasedGame {
 			gameContainer.setTargetFrameRate(frameRate);
 			gameContainer.setAlwaysRender(true);
 			gameContainer.start();
+			
 		}
 		catch(SlickException e)
 		{
