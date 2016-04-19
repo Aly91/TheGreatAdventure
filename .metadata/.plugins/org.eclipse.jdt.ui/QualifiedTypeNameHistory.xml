@@ -23,9 +23,10 @@
 <fullyQualifiedTypeName name="javax.xml.soap.Node"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.Input"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.Image"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.state.StateBasedGame"/>
 <fullyQualifiedTypeName name="org.lwjgl.util.Rectangle"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.geom.Polygon"/>
 <fullyQualifiedTypeName name="org.newdawn.slick.Color"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.newdawn.slick.geom.Transform"/>
 </qualifiedTypeNameHistroy>

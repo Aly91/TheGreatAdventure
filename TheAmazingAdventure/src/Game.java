@@ -22,6 +22,7 @@ public class Game extends StateBasedGame {
 	public static final int height = 800;
 	public static final int width = 500;
 	public static final int frameRate = 100;
+
 	
 //Game states 
 	public static final int mainMenu = 0;

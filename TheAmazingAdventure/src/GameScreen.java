@@ -18,6 +18,7 @@ public class GameScreen implements GameState{
 	private StateBasedGame game;
 	public final int stateID = 1;
 	Player player = new Player();
+
 	boolean hit = false;
 	//float x = 0.0f;
 	//float y = 0.0f;
@@ -172,6 +173,9 @@ public class GameScreen implements GameState{
 	this.game = game;
 	game.getState(Game.gameScreen);
 	gameContainer.getInput().enableKeyRepeat();
+	
+
+	
 
 	}
 
@@ -185,22 +189,19 @@ public class GameScreen implements GameState{
      
 		
      Image background = new Image("background.png");
-     
- 	player.render(gameContainer, game, g);
+     g.drawImage(background,0,0);
 
-    g.drawImage(background,0,0);
-    
-    
-    
-   
+ 	player.render(gameContainer, game, g);
+ 	
 	}
 
 	public void update(GameContainer gameContainer, StateBasedGame game, int delta) throws SlickException {
-		player.update(gameContainer, delta);
+		player.update(gameContainer, game,gameContainer.getGraphics(), delta);
 		//if statement for key input for pausing game.
 		if(gameContainer.getInput().isKeyPressed(Input.KEY_P))
 		{
 			gameContainer.isPaused(); //Pauses the game upon hitting the P key
+			System.out.println("paused");
 			
 		}
 		
