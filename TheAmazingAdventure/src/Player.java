@@ -1,6 +1,10 @@
+
+
 import org.newdawn.slick.AppGameContainer;
 
 import org.newdawn.slick.state.StateBasedGame;
+import org.newdawn.slick.state.transition.FadeInTransition;
+import org.newdawn.slick.state.transition.FadeOutTransition;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Input;
@@ -11,40 +15,48 @@ import org.newdawn.slick.Color;
 
 public class Player extends Game
 {
-	float shipX;
-	float shipY;
+	//float shipX;
+	//float shipY;
 	float playerX;
 	float playerY;
-	int[] lives;
-	int[] bullets;
+	float bulletX;
+	float bulletY;
+	int lives;
+	//int [] bullets;
+	//int bullet;
 	int speed;
 	Polygon playerShip = new Polygon();
+	
+
 	
 	
   public Player() 
   {
 	  
-	  shipX =100;
-	  shipY = 50;
-	  speed = 5;
-	  
+	 // shipX =100;
+	  //shipY = 150;
+	  lives = 5;
+	  speed = 8;
+	  bulletX =	  10;
+	  bulletY = 10;
 	  playerX = width /2;
 	  playerY = height / 2;
-	 
+	
 
 
 	playerShip.addPoint(0, -10);
 	playerShip.addPoint(10, 10);
 	playerShip.addPoint(-10, 10);
-	
-;
+	playerShip.closed();
 
 	 
-	  
-	  lives = new int[10];
-	  bullets = new int[100];
+	 // bullet =1000;
+	
+	  //bullets =  new int[bullet];
 
   }
+  
+ 
   
   
 	
@@ -53,9 +65,10 @@ public class Player extends Game
 	{
 		
 		
-		g.drawString("Lives : " + lives[9],50,10);
+		g.drawString("Lives : " + lives,50,10);
 		
-		g.drawString("Ammo : " +bullets[99], 250,10);
+		//g.drawString("Ammo : " + bullets, 180,10);
+		
 
 
 		//playerShip.transform(Transform.createTranslateTransform(playerX, playerY));
@@ -70,9 +83,10 @@ public class Player extends Game
 		
 		playerShip.setLocation(playerX, playerY);
 		g.draw(playerShip);
+		g.fill(playerShip);
 		
 	
-		//playerShip.drawLine(shipX, shipY, shipY, shipX);
+	
 	
 	
 		g.setColor(Color.pink);
@@ -106,36 +120,35 @@ public class Player extends Game
 		
 		if(gameContainer.getInput().isKeyPressed(Input.KEY_LEFT))
 		{
-			playerX -=1;
+			playerX -= speed;
 			 System.out.println("left pressed");
 		}
 	
 		if(gameContainer.getInput().isKeyPressed(Input.KEY_S))
 		{
-			for(int i = 0; i < bullets.length;i++)
-			{
-				g.setColor(Color.white);
-				g.drawLine(5,5,5,5);
-				
-				if(bullets[i] == 0)
-				{
-					g.setColor(Color.red);
-					g.drawString("Out of ammo", 300,100);
-					
-					
-				}
+			
+			float bulletSpeed;
+			
+			bulletSpeed = 10.0f;
+			
+				g.drawLine(bulletX,playerX, bulletY,playerY - bulletSpeed);
+				g.setColor(Color.yellow);
 				 System.out.println("shoot");
-			}
-			
-			
-			
-			
-		
-			
-		
-			
-			
 		}
+		
+
+		
+		for(int i =0; i <lives; i++)
+		{
+			if(lives == 0)
+			{
+				game.enterState(Game.gameOver, new FadeOutTransition(Color.black), new FadeInTransition (Color.black));
+				
+			}
+		}
+			
 	}
 	
 }
+	
+

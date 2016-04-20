@@ -32,7 +32,7 @@ public class Game extends StateBasedGame {
 
 	public Game() 
 	{
-		super("The Amazing Adventure");
+		super("The Great Adventure");
 		
 	}
 	

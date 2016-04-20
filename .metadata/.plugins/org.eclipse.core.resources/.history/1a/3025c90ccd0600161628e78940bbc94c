@@ -1,0 +1,31 @@
+import org.newdawn.slick.AppGameContainer;
+
+import org.newdawn.slick.state.StateBasedGame;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Input;
+import org.newdawn.slick.SlickException;
+import org.newdawn.slick.geom.Vector2f;
+
+public class Bullet extends Player{
+	
+	public Vector2f position;
+	float speed;
+	
+	public void Bulllet(float x, float y, float speed)
+	{
+		position = new Vector2f (x, y);
+		this.speed = speed;
+	}
+	
+
+	public void render()
+	{
+	}
+	
+	public void update()
+	{
+	}
+	
+
+}

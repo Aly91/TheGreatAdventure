@@ -1,0 +1,35 @@
+import org.newdawn.slick.AppGameContainer;
+import org.newdawn.slick.state.StateBasedGame;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.SlickException;
+
+public class Bullet extends Game
+{ 
+
+	float bulletX;
+	float bulletY;
+	float bulletSpeed;
+
+
+
+	public void bullet()
+	{
+		  bulletX = 10;
+		  bulletY= 10;
+		  bulletSpeed = 10.0f;
+		  
+	}
+	
+	public void render(GameContainer gameContainer, StateBasedGame game, Graphics g)
+	{
+	 g.drawLine(bulletX,10, bulletY,10);
+	}
+	
+	public void update(GameContainer gameContainer, StateBasedGame game, Graphics g, int delta)
+	{
+		
+	}
+	
+
+}
